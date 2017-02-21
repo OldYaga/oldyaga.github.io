@@ -405,8 +405,8 @@ merge(config.macros.search,{
 	failureMsg: "No tiddlers found matching %0"});
 
 merge(config.macros.tagging,{
-	label: "tagging: ",
-	labelNotTag: "not tagging",
+	label: "Tiddlers with tag '%0' are: ",
+	labelNotTag: "Tiddlers with tag '%0' not found.",
 	tooltip: "List of tiddlers tagged with '%0'"});
 
 merge(config.macros.timeline,{
@@ -2199,7 +2199,7 @@ config.macros.tagging.handler = function(place,macroName,params,wikifier,paramSt
 	var sortby = getParam(params,"sortBy",false);
 	var tagged = store.getTaggedTiddlers(title,sortby);
 	var prompt = tagged.length == 0 ? this.labelNotTag : this.label;
-	createTiddlyElement(ul,"li",null,"listTitle",prompt.format([title,tagged.length]));
+	createTiddlyElement(ul,"li",null,"tagging-listTitle",prompt.format([title,tagged.length]));
 	var t;
 	for(t=0; t<tagged.length; t++) {
 		createTiddlyLink(createTiddlyElement(ul,"li"),tagged[t].title,true);
@@ -2393,7 +2393,7 @@ config.macros.edit.handler = function(place,macroName,params,wikifier,paramStrin
 			var wrapper2 = createTiddlyElement(wrapper1,"div");
 			e = createTiddlyElement(wrapper2,"textarea");
 			e.value = v = store.getValue(tiddler,field) || defVal;
-			rows = rows || 10;
+			rows = rows || 20;  /* KW Patch: rows in edit textarea */
 			var lines = v.match(/\n/mg);
 			var maxLines = Math.max(parseInt(config.options.txtMaxEditRows,10),5);
 			if(lines != null && lines.length > rows)
@@ -4285,6 +4285,9 @@ Story.prototype.onTiddlerDblClick = function(ev)
 	var e = ev || window.event;
 	var target = resolveTarget(e);
 	if(target && target.nodeName.toLowerCase() != "input" && target.nodeName.toLowerCase() != "textarea") {
+
+if (window.readOnly) return false; //@KW: Disable editing for remote files.
+
 		if(document.selection && document.selection.empty)
 			document.selection.empty();
 		config.macros.toolbar.invokeCommand(this,"defaultCommand",e);
