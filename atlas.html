@@ -484,6 +484,27 @@ noscript {display:none;} /* Fixes a feature in Firefox 1.5.0.2 where print previ
 </div></div>
 <!--POST-SHADOWAREA-->
 <div id="storeArea">
+<div title="CR, CL" creator="OldYaga" modifier="OldYaga" created="201702251110" modified="201702251116" tags="Правила" changecount="3">
+<pre>CR0 – Анархия. Нет ни законов, ни контроля, ни налогов.
+CR1 – Очень свободное. Налоги добровольны или очень низки. Преследуется только применение силы или угроз к другим гражданам. Контролируется только распространение снаряжения с КЛ0 (см. Легальность, с.507).
+CR2 – Свободное. Существуют некоторые законы; большинство выгодны индивидам. Налоги низкие. Доступ к оборудованию КЛ0 и КЛ1 контролируется.
+CR3 – Умеренное. Множество законов, но большинство выгодны гражданам. Налоги умеренные и справедливые. Контролируется доступ к оборудованию КЛ0-2.
+CR4 – Контролируемое. Множество законов, большинство – в пользу государства. Контроль за средствами массовой информации; частные газеты и передачи могут быть запрещены. Налоги серьёзные и зачастую завышены. Контролируется доступ к снаряжению от КЛ0 до КЛ3.
+CR5 – Репрессивное. Существует множество законов и предписаний, строго охраняемых. Налоги велики и чаще всего несправедливы. Строгий контроль над информационными технологиями: компьютерами, фотокопированием, печатными станками, передатчиками и т.д. Контролируется распространение почти всех товаров; вы не сможете купить почти ничего без подходящего разрешения или бумажной волокиты.
+CR6 – Тотальный контроль. Множество сложных законов. Люди живут, чтобы служить государству. Большинство преступлений наказывается смертью, а суды – если вообще существуют – лишь видимость. На огромные налоги уходит большая часть дохода граждан. Распространена цензура, частное владение любыми видами информационных технологий запрещено. Контроль над распространением любых товаров, и правительство может ограничить доступ даже к предметам первой необходимости.
+
+CL0 – Запрещенное. Оружие массового уничтожения; межконтинентальные ракеты; орбитальные оружейные платформы, стратегические бомбардировщики.
+CL1 – Военное. Тяжелое оружие; радары ПВО, средства РЭБ (sensor jammers), бронетехника, мины.
+CL2 – Ограниченное. Легкое штурмовое оружие; глушители; средства наблюдения (прослушивание телефонов и т.д.); взрывчатка, опасные медикаменты.
+CL3 – Лицензируемое. Пистолеты, охотничье оружие, радиопередатчики; большинство невооруженного транспорта; обычные лекарства и медицинское снаряжение.
+CL4 – Свободное. Несмертельное оружие (станнеры), домашние компьютеры, радио- и телевизионные приемники, камеры, большинство инструментов, наборы первой помощи.
+
+CL = CR + 1 и больше: любой гражданин может обладать этим предметом.
+CL = CR: объекты разрешены всем, кроме осужденных и приравненным к ним. Может требоваться регистрация, но разрешения обычно не нужно.
+CL = CR - 1: для владения и ношения предмета необходима лицензия. Для получения ее необходимо продемонстрировать надежность и законопослушность. Обычно лицензия стоит 1к × 10% стоимости самого предмета.
+CL = CR - 2: Запрещено, кроме полиции, армии и разведки.
+CL = CR - 3 и менее: разрешено только армейским подразделениям или секретным службам.</pre>
+</div>
 <div title="CloseUnsavedOnCancel" creator="RainSkylark" modifier="RainSkylark" created="201301171156" modified="201202150301" tags="systemConfig excludeLists" changecount="3">
 <pre>/***
 |''Name:''|CloseUnsavedOnCancel|
@@ -1297,6 +1318,21 @@ config.macros.newTiddler.onClickNewTiddler = function()
 
 //}}}
 </pre>
+</div>
+<div title="POWER CELLS" creator="OldYaga" modifier="OldYaga" created="201702251133" tags="Правила" changecount="1">
+<pre>AA cell: These tiny cells operate devices with minimal power requirements, like very small robots or brain implants. $1, 0.0005 lbs. (2,000 AA cells weigh 1 lb.)
+
+A cell: These small cells are often used in clothing or consumer goods that require low power outputs. They’re about the size of a watch battery, or postage stamp-sized for flexible cells (see below). $2, 0.005 lbs. (200 A cells weigh 1 lb.)
+
+B cell: These power wearable computers, tiny radios, small tools, and other devices with modest power requirements, including some low-powered weapons. A typical B cell is the same size as a pistol cartridge or an AA battery. $3, 0.05 lbs.
+
+C cell: These are the most common energy source for personal beam weapons, tools and high-power electronics. Equipment designed for larger or smaller cells often has an adapter for C-cell operation. An ultra-tech battlefield may be littered with expended C cells. Each cell is about the same size as a pistol magazine. $10, 0.5 lbs.
+
+D cell: These power military beam weapons and heavy equipment. They are often worn as a separate power pack. They’re about the size of a thick paperback book. $100, 5 lbs. LC4.
+
+E cell: These power small vehicles, battlesuits, support weapons and other power-intensive systems. They’re about the size of a backpack. $2,000, 20 lbs. LC4.
+
+F cell: These power medium or large vehicles and cannon-sized beam weapons. They’re about the size of a compact car engine. $20,000, 200 lbs. LC4.</pre>
 </div>
 <div title="PageTemplate" creator="OldYaga" modifier="OldYaga" created="201702211606" modified="201702211607" changecount="2">
 <pre>&lt;!--{{{--&gt;
@@ -3999,6 +4035,9 @@ config.macros.saveAndReload.onclick = function()
 
 ''Шаблон расы в GURPS''</pre>
 </div>
+<div title="Броня" creator="OldYaga" modifier="OldYaga" created="201702251116" tags="Правила" changecount="1">
+<pre>Type the text for 'Броня'</pre>
+</div>
 <div title="Булрати" creator="OldYaga" modifier="OldYaga" created="201702211937" modified="201702222046" tags="Раса" changecount="2">
 <pre>//Латинское название расы//
 
@@ -4235,6 +4274,48 @@ config.macros.saveAndReload.onclick = function()
 
 ''Шаблон расы в GURPS''</pre>
 </div>
+<div title="Команда" creator="OldYaga" modifier="OldYaga" created="201702251140" modified="201702251222" tags="НПС" changecount="19">
+<pre>Гори  - молодой булрати, технарь 12, лазерные турели 12, зарплата 2%, инженерный отсек, заселился без барахла, расходы на жизнь 600$
+Джошуа 622 - сайлонец, штурмовик 12, урон 5d, DR 25, 15 HP, планетолог 12, зарплата 3%, трюм, заселился без барахла, расходы на жизнь 600$
+Шаккри - человек, военная, имплантанты рук, глаза, модно одета, штурмовик 12, урон 7d, DR 15, 12 HP, сенсорщик 12, зарплата 3%, мостик - сенсоры, заселилась с барахлом, расходы на жизнь 1200$
+Ньюми Ре - листья, заселилась со своей экосистемой, техничка 12, боевая химия 12, зарплата 2,5%, кают-компания, заселилась с барахлом, расходы на жизнь 1200$
+Рьян - молодой мрршан, одевается в джинсу, медик 12, зарплата 1%, медотсек, заселился без барахла, расходы на жизнь 600$
+Квирк - сектоид, бегает от корпоративных агентов, клочник 13, штурмовик 13, урон 7d, DR 15, 10 HP, зарплата 3%, пульт системы маскировки, заселился с барахлом, расходы на жизнь 1200$
+4 оператора на мостике - силикиод, водоросли, человек, камино, навыки 12, могут заменять пилота, навигатора и проч., зарплата по 2%, всего 8%, двое заселились с барахлом, расходы на жизнь 600$ на каждого
+----
+
+Итого:
+
+*4 комбатанта
+
+*зарплата всей команды 22,5%
+
+*расходы на жизнь команды в день (путешествие меньше месяца)
+**Гори - 20$
+**Джошуа - 20$
+**Шаккри - 40$
+**Ньюми Ре - 40$
+**Рьян - 20$
+**Квирк - 40$
+**команда на мостике - 80$
+*Итого расходы на команду в день (путешествие меньше месяца) - 220$
+
+*расходы на жизнь команды в день (путешествие больше месяца)
+**Гори - 120$
+**Джошуа - 120$
+**Шаккри - 40$
+**Ньюми Ре - 40$
+**Рьян - 120$
+**Квирк - 40$
+**команда на мостике - 320$
+*Итого расходы на команду в день (путешествие больше месяца) - 800$
+----
+Пасажир
+
+Бел - ареку, имеет искусственное тело, торговый магнат, космоблогер, писатель, торговый магнат 15, медиа 15 + еще пару скиллов, живет в кают-компании
+
+*расходы на жизнь пассажира в день - 120000$ (Бел платит сам)</pre>
+</div>
 <div title="Компьютеры" creator="OldYaga" modifier="OldYaga" created="201702242106" modified="201702250001" tags="Правила" changecount="90">
 <pre>++Компьютеры++
 Программируемые цифровые компьютеры появились в ТУ7 и быстро стали улучшаться, уменьшаться и дешеветь на более поздних ТУ. В некоторых сеттингах компьютеры могут даже достичь таких вычислительных мощностей, что обретут сознание.
@@ -4394,19 +4475,19 @@ config.macros.saveAndReload.onclick = function()
 <pre>[[Компьютеры]]
 [[Инструменты]]</pre>
 </div>
-<div title="Оружие" creator="OldYaga" modifier="OldYaga" created="201702250110" modified="201702250208" tags="Правила" changecount="37">
+<div title="Оружие" creator="OldYaga" modifier="OldYaga" created="201702250110" modified="201702251139" tags="Правила" changecount="40">
 <pre>|&gt;|&gt;|&gt;|&gt;|&gt;|&gt;|&gt;|&gt;|&gt;|&gt;|&gt;|&gt;|&gt;|&gt;| !GUNS (SMG) (DX-4, or most other Guns at -2) |
 | !Изображение | !TL | !Weapon | !Damage | !Acc | !Range | !Weight | !RoF | !Shots | !ST | !Bulk | !Rcl | !Cost | !LC | !Цена магазина |
-|[img[atlas\resources\weapon\smg\PDW5.7mmCL.jpg]]| 9 | Personal Defense Weapon, 5.7mmCL | {{{4d pi-}}} | 4 | 350/3,000 | 4.5/1 | 10 | 100+1(5) | 9† | -3 | 2 | $1,000 | 2 | фсфсфывсфыс|
+|[img[atlas\resources\weapon\smg\PDW5.7mmCL.jpg]]| 9 | Personal Defense Weapon, 5.7mmCL | {{{4d pi-}}} | 4 | 350/3,000 | 4.5/1 | 10 | 100+1(5) | 9† | -3 | 2 | $1,000 | 2 | 20$ |
 
 |&gt;|&gt;|&gt;|&gt;|&gt;|&gt;|&gt;|&gt;|&gt;|&gt;|&gt;|&gt;|&gt;|&gt;| !GUNS (RIFLE) (DX-4, or most other Guns at -2) |
 | !Изображение | !TL | !Weapon | !Damage | !Acc | !Range | !Weight | !RoF | !Shots | !ST | !Bulk | !Rcl | !Cost | !LC | !Цена магазина |
-|[img[atlas\resources\weapon\rifle\PR25mmCL.png]]| 9 | Payload Rifle, 25mmCL | {{{10d pi++}}} | 4 | 700/8,500 | 38/10 | 3 | 8+1(3) | 12B† | -6 | 4 | $8,000 | 2 | Цена магазина |
-|[img[atlas\resources\weapon\rifle\SR10mmCLR.jpg]]| 9 | Storm Rifle, 10mmCLR | {{{9d pi++}}} | 4 | 1,300/5,800 | 10/1.2 | 3 | 12+1(3) | 10† | -4 | 3 | $2,700 | 3 | Цена магазина |
+|[img[atlas\resources\weapon\rifle\PR25mmCL.png]]| 9 | Payload Rifle, 25mmCL | {{{10d pi++}}} | 4 | 700/8,500 | 38/10 | 3 | 8+1(3) | 12B† | -6 | 4 | $8,000 | 2 | 200$ |
+|[img[atlas\resources\weapon\rifle\SR10mmCLR.jpg]]| 9 | Storm Rifle, 10mmCLR | {{{9d pi++}}} | 4 | 1,300/5,800 | 10/1.2 | 3 | 12+1(3) | 10† | -4 | 3 | $2,700 | 3 | 16,6$ |
 
 |&gt;|&gt;|&gt;|&gt;|&gt;|&gt;|&gt;|&gt;|&gt;|&gt;|&gt;|&gt;|&gt;|&gt;| !GUNS (SHOTGUN) (DX-4, or most other Guns at -2) |
 | !Изображение | !TL | !Weapon | !Damage | !Acc | !Range | !Weight | !RoF | !Shots | !ST | !Bulk | !Rcl | !Cost | !LC | !Цена магазина |
-|[img[atlas\resources\weapon\shotgun\SP18.5mmPC.jpg]]| 9 | Shotgun Pistol, 18.5mmPC | {{{4d pi++}}} | 1 | 100/500 | 4/0.7 | 3 | 5+1(3) | 10 | -3 | 5 | $330 | 3 | Цена магазина |</pre>
+|[img[atlas\resources\weapon\shotgun\SP18.5mmPC.jpg]]| 9 | Shotgun Pistol, 18.5mmPC | {{{4d pi++}}} | 1 | 100/500 | 4/0.7 | 3 | 5+1(3) | 10 | -3 | 5 | $330 | 3 | 14$ |</pre>
 </div>
 <div title="Основная информация по игре" creator="OldYaga" modifier="OldYaga" created="201702211501" modified="201702221233" tags="excludeLists" changecount="5">
 <pre>Основные вопросы
@@ -4451,12 +4532,14 @@ config.macros.saveAndReload.onclick = function()
 
 10. Инопланетяне - присутствуют, смотри [[Расы]]</pre>
 </div>
-<div title="Партия" creator="OldYaga" modifier="OldYaga" created="201702222025" modified="201702222119" tags="Партия" changecount="9">
+<div title="Партия" creator="OldYaga" modifier="OldYaga" created="201702222025" modified="201702251140" tags="Партия" changecount="11">
 <pre>[[Вольтир]]
 [[Квасил]]
 [[Мохномут]]
 [[Бу]]
 [[Чобид]]
+
+[[Команда]]
 
 [[Таблица с деньгами партии|https://docs.google.com/spreadsheets/d/1Snz0Rv17Ytk0tKHvCAdTpbodk9VA2oHpJF274b1147o/edit#gid=0&quot;]]
 
@@ -4486,10 +4569,13 @@ config.macros.saveAndReload.onclick = function()
 
 ''Шаблон расы в GURPS''</pre>
 </div>
-<div title="Правила" creator="OldYaga" modifier="OldYaga" created="201702221942" modified="201702250110" tags="Правила" changecount="5">
+<div title="Правила" creator="OldYaga" modifier="OldYaga" created="201702221942" modified="201702251131" tags="Правила" changecount="10">
 <pre>[[Оборудование]]
 [[Экономика]]
-[[Оружие]]</pre>
+[[Оружие]]
+[[Броня]]
+[[Энергия]]
+[[CR, CL]]</pre>
 </div>
 <div title="Протеане" creator="OldYaga" modifier="OldYaga" created="201702212027" modified="201702222048" tags="Раса" changecount="2">
 <pre>//Латинское название расы//
@@ -5288,7 +5374,7 @@ __Другие организации тоссов__
 
 ''Шаблон расы в GURPS''</pre>
 </div>
-<div title="Экономика" creator="OldYaga" modifier="OldYaga" created="201702221932" modified="201702242356" tags="Правила" changecount="38">
+<div title="Экономика" creator="OldYaga" modifier="OldYaga" created="201702221932" modified="201702251208" tags="Правила" changecount="39">
 <pre>|&gt;|&gt;| !Начальное богатство |
 | TL | Примеры | Начальное богатство* |
 | TL0 | Каменный век (доисторический период и далее). | $250 |
@@ -5317,12 +5403,15 @@ __Другие организации тоссов__
 | 3 | Поместный рыцарь, цеховой Мастер, мэр мегаполиса | $12.000 |
 | 2 | Безземельный рыцарь, мэр, директор предприятия | $3.000 |
 | 1 | Оруженосец, торговец, священник, врач, советник | $1.200 |
-| 0 | Вольный человек, подМастерье, обычный гражданин | $600 |
+| 0 | Вольный человек, подмастерье, обычный гражданин | $600 |
 | -1 | Крепостной, бедный гражданин | $300 |
 | -2 | Раб, бездомный | $100 |
  *можно изображать из себя кого-то статусом выше - деньги и бросок Хороших манер (Светское общество)
 1. Отпуск, путешествие дольше месяца - расходы в 6 раз выше
 2. День по кабакам и гостиницам - 20% месячного расхода (неорганизованное путешествие)</pre>
+</div>
+<div title="Энергия" creator="OldYaga" modifier="OldYaga" created="201702251131" tags="Правила" changecount="1">
+<pre>[[POWER CELLS]]</pre>
 </div>
 </div>
 <!--POST-STOREAREA-->
